@@ -98,6 +98,8 @@ Built by Marcus Richards, directing AI coding agents.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. Copyright (c) 2026 Marcus Richards. See [LICENSE](LICENSE).
+
+Files in `spec/` are copies of an IETF Internet-Draft by another author, Copyright (c) 2026 IETF Trust and the persons identified as the document authors. They are subject to BCP 78 and the IETF Trust Legal Provisions, and they are not covered by this repository's MIT license.
 
 Target specification: `draft-schrock-ep-authorization-evidence-chain-02` by the EMILIA Protocol project. This implementation is independent and unaffiliated.
