@@ -2,6 +2,6 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .hermes/
-marsojuji-cmyk/
+FetchDoge/
 calgary-portfolio-sources.json
 formats/
