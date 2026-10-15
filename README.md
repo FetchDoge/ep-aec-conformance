@@ -94,6 +94,8 @@ results/ERRATA-AND-SUBMISSION-2026-09-26.md
 
 The -02 implementation is complete, with all 56 vectors passing. -07 support is partial (see Known limits). The finding is under discussion upstream in [#864](https://github.com/emiliaprotocol/emilia-protocol/issues/864). The verifier makes no novelty claims: EP-AEC is the draft author's work, and this repo reports a conformance result about it.
 
+Built by Marcus Richards, directing AI coding agents.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
