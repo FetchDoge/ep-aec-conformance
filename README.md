@@ -2,7 +2,7 @@
 
 **This verifier checks IETF EP-AEC authorization evidence chains, built from the spec text alone. It fails closed on every error, and building it exposed a spec-level bypass.**
 
-[![CI](https://github.com/marsojuji-cmyk/ep-aec-conformance/actions/workflows/ci.yml/badge.svg)](https://github.com/marsojuji-cmyk/ep-aec-conformance/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](pyproject.toml)
+[![CI](https://github.com/FetchDoge/ep-aec-conformance/actions/workflows/ci.yml/badge.svg)](https://github.com/FetchDoge/ep-aec-conformance/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](pyproject.toml)
 
 **Spec-first, not implementation-first.** The verifier is an independent implementation of `draft-schrock-ep-authorization-evidence-chain`, written from the specification text with no reference to the author's implementations. **Revision-pinned:** by default it implements **-02**, where all findings reproduce. `spec_revision="07"` selects current-draft semantics (labels display-only, chain requirement descriptive-only, §8 grammar). Live discussion: [emiliaprotocol/emilia-protocol#864](https://github.com/emiliaprotocol/emilia-protocol/issues/864).
 
