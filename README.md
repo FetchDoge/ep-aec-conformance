@@ -1,6 +1,6 @@
 # EP-AEC Conformance Verifier
 
-**This verifier checks IETF EP-AEC authorization evidence chains, built from the spec text alone. It fails closed on every error, and building it exposed a spec-level bypass.**
+**This verifier checks IETF EP-AEC authorization evidence chains, built from the spec text alone. It fails closed on every error. Building it surfaced a defect in an older revision of the spec (-02), confirmed by the maintainers and already corrected in -03.**
 
 [![CI](https://github.com/FetchDoge/ep-aec-conformance/actions/workflows/ci.yml/badge.svg)](https://github.com/FetchDoge/ep-aec-conformance/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](pyproject.toml)
 
@@ -8,7 +8,7 @@
 
 ## What it found
 
-Building from the spec text alone exposed **one security-relevant bypass in the spec** (P1 / I1):
+Building from the spec text alone surfaced **one security-relevant defect in the -02 text** (P1 / I1). The maintainers confirmed it in [#864](https://github.com/emiliaprotocol/emilia-protocol/issues/864); it had already been corrected in -03 (published July 19, 2026), where labels are display-only, and the fix holds in -07 (vector J1 pins it):
 
 > **§4 step 3.4 puts `label` in the satisfied set alongside `type`. §5 resolves `IDENT` against both.** A presenter holding one delegation receipt and no human authorization can satisfy `delegation AND ep-quorum` by labelling the receipt `"ep-quorum"`. Same receipt, same signature, one string decides it.
 
@@ -70,8 +70,8 @@ The only runtime dependency is `PyNaCl`. Pass `spec_revision="07"` (or `Policy(s
 
 ## Evidence
 
-- **64 tests pass:** `python3 -m pytest tests/test_conformance.py`, run 2026-10-07 on `main`. CI runs the same command on every push.
-- **4 probes, 4 findings:** `python3 verifier/probe.py`, run 2026-10-07.
+- **64 tests pass:** `python3 -m pytest tests/test_conformance.py`, re-run 2026-10-15 on `main` at `3046ce2`. CI runs the same command on every push.
+- **4 probes, 4 findings:** `python3 verifier/probe.py`, re-run 2026-10-15.
 - Raw outputs are committed: `results/conformance-run-{01,02}.json`, `results/probe-run-{01,02}.json`, and logs.
 
 ## Architecture
