@@ -96,6 +96,10 @@ The -02 implementation is complete, with all 56 vectors passing. -07 support is 
 
 Built by Marcus Richards, directing AI coding agents.
 
+## Case study
+
+[Independent verification and maintainer review](CASE-STUDY.md): the historical finding, the CLI regression, the independent rerun, and the limits of the result, with links to the public evidence.
+
 ## License
 
 MIT. Copyright (c) 2026 Marcus Richards. See [LICENSE](LICENSE).
